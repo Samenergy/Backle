@@ -130,7 +130,7 @@ function VerticalNavbar() {
           <img src="./src/assets/logo (1).png" className="-mt-20" />
         </div>
         <div className=" px-8 font-semibold  flex flex-col justify-between items-left ">
-          <a href="/">
+          <a href="/home">
             <div
               className={`${
                 isActiveHome || isHoveredHome
