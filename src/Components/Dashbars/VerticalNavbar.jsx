@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { GoHomeFill } from "react-icons/go";
-import { FaSearch } from "react-icons/fa";
+import { IoSearch } from "react-icons/io5";
 import { MdOutlineExplore } from "react-icons/md";
 import { TbMessageCircle2 } from "react-icons/tb";
 import { FaRegBell } from "react-icons/fa6";
@@ -123,7 +124,7 @@ function VerticalNavbar() {
   };
 
   return (
-    <div className="flex border border-[#00AFEE] shadow-xl rounded-lg">
+    <div className="flex w-[250px]  ">
       <div className="bg-[#edf2f6] h-screen p-5 pt-8 w-[220px] duration-500 relative">
         <div>
           <img src="./src/assets/logo (1).png" className="-mt-20" />
@@ -140,8 +141,8 @@ function VerticalNavbar() {
               onMouseLeave={handleMouseLeaveHome}
               onClick={handleClickHome}
             >
-              <GoHomeFill className="text-3xl w-auto mr-2.5" />
-              <h1 className="text-2xl">Home</h1>
+              <GoHomeFill className="text-2xl w-auto mr-2.5" />
+              <h1 className="text-xl">Home</h1>
             </div>
           </a>
           <a href="/">
@@ -150,13 +151,13 @@ function VerticalNavbar() {
                 isActiveSearch || isHoveredSearch
                   ? "rounded-lg shadow-xl bg-white  text-[#000]"
                   : ""
-              } duration-500 flex items-center -ml-10 w-[225px] px-5 py-2 mt-2 text-[#b1b8be] `}
+              } duration-500 flex items-center -ml-9 w-[225px] px-5 py-2 mt-2 text-[#b1b8be] `}
               onMouseEnter={handleMouseEnterSearch}
               onMouseLeave={handleMouseLeaveSearch}
               onClick={handleClickSearch}
             >
-              <FaSearch className="text-2xl w-auto mr-3" />
-              <h1 className="text-2xl">Search</h1>
+              <IoSearch className="text-xl w-auto mr-3" />
+              <h1 className="text-xl">Search</h1>
             </div>
           </a>
           <a href="/">
@@ -170,8 +171,8 @@ function VerticalNavbar() {
               onMouseLeave={handleMouseLeaveExplore}
               onClick={handleClickExplore}
             >
-              <MdOutlineExplore className="text-3xl w-auto mr-2" />
-              <h1 className="text-2xl">Explore</h1>
+              <MdOutlineExplore className="text-2xl w-auto mr-2" />
+              <h1 className="text-xl">Explore</h1>
             </div>
           </a>
           <a href="/">
@@ -185,8 +186,8 @@ function VerticalNavbar() {
               onMouseLeave={handleMouseLeaveMessages}
               onClick={handleClickMessages}
             >
-              <TbMessageCircle2 className="text-3xl w-auto mr-2" />
-              <h1 className="text-2xl">Messages</h1>
+              <TbMessageCircle2 className="text-2xl w-auto mr-2" />
+              <h1 className="text-xl">Messages</h1>
             </div>
           </a>
           <a href="/">
@@ -200,8 +201,8 @@ function VerticalNavbar() {
               onMouseLeave={handleMouseLeaveNotifications}
               onClick={handleClickNotifications}
             >
-              <FaRegBell className="text-3xl w-auto mr-2" />
-              <h1 className="text-2xl">Notifications</h1>
+              <FaRegBell className="text-2xl w-auto mr-2" />
+              <h1 className="text-xl">Notifications</h1>
             </div>
           </a>
           
@@ -216,8 +217,8 @@ function VerticalNavbar() {
               onMouseLeave={handleMouseLeaveSettings}
               onClick={handleClickSettings}
             >
-              <MdOutlineExplore className="text-3xl w-auto mr-2" />
-              <h1 className="text-2xl">Settings</h1>
+              <MdOutlineExplore className="text-2xl w-auto mr-2" />
+              <h1 className="text-xl">Settings</h1>
             </div>
           </a>
           <a href="/">
@@ -231,11 +232,11 @@ function VerticalNavbar() {
               onMouseLeave={handleMouseLeaveProfile}
               onClick={handleClickProfile}
             >
-              <FaUserCircle className="text-3xl w-auto mr-2" />
-              <h1 className="text-2xl">Profile</h1>
+              <FaUserCircle className="text-2xl w-auto mr-2" />
+              <h1 className="text-xl">Profile</h1>
             </div>
           </a>
-          <a href="/">
+          <Link to="/login">
             <div
               className={`${
                 isActiveLogout || isHoveredLogout
@@ -246,10 +247,10 @@ function VerticalNavbar() {
               onMouseLeave={handleMouseLeaveLogout}
               onClick={handleClickLogout}
             >
-              <FiLogOut className="text-3xl w-auto mr-2" />
-              <h1 className="text-2xl">Log out</h1>
+              <FiLogOut className="text-2xl w-auto mr-2" />
+              <h1 className="text-xl">Log out</h1>
             </div>
-          </a>
+          </Link>
         </div>
       </div>
     </div>
