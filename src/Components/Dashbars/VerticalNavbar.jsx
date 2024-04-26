@@ -129,7 +129,7 @@ function VerticalNavbar() {
         <div>
           <img src="./src/assets/logo (1).png" className="-mt-20" />
         </div>
-        <div className=" px-8 font-semibold  flex flex-col justify-between items-left ">
+        <div className=" px-8 font-semibold  flex flex-col justify-between items-left -mt-5">
           <a href="/home">
             <div
               className={`${
@@ -149,7 +149,7 @@ function VerticalNavbar() {
             <div
               className={`${
                 isActiveSearch || isHoveredSearch
-                  ? "rounded-lg shadow-xl bg-white  text-[#000]"
+                  ? "rounded-lg shadow-xl bg-white  text-gray-950"
                   : ""
               } duration-500 flex items-center -ml-9 w-[225px] px-5 py-2 mt-2 text-[#b1b8be] `}
               onMouseEnter={handleMouseEnterSearch}
@@ -164,7 +164,7 @@ function VerticalNavbar() {
             <div
               className={`${
                 isActiveExplore || isHoveredExplore
-                  ? "rounded-lg shadow-xl bg-white  text-[#000]"
+                  ? "rounded-lg shadow-xl bg-white  text-gray-950"
                   : ""
               } duration-500 flex items-center -ml-10 w-[225px] px-5 py-2 mt-2 text-[#b1b8be] `}
               onMouseEnter={handleMouseEnterExplore}
@@ -179,7 +179,7 @@ function VerticalNavbar() {
             <div
               className={`${
                 isActiveMessages || isHoveredMessages
-                  ? "rounded-lg shadow-xl bg-white  text-[#000]"
+                  ? "rounded-lg shadow-xl bg-white  text-gray-950"
                   : ""
               } duration-500 flex items-center -ml-10 w-[225px] px-5 py-2 mt-2 text-[#b1b8be] `}
               onMouseEnter={handleMouseEnterMessages}
@@ -194,7 +194,7 @@ function VerticalNavbar() {
             <div
               className={`${
                 isActiveNotifications || isHoveredNotifications
-                  ? "rounded-lg shadow-xl bg-white  text-[#000]"
+                  ? "rounded-lg shadow-xl bg-white  text-gray-950"
                   : ""
               } duration-500 flex items-center -ml-10 w-[225px] px-5 py-2 mt-2 text-[#b1b8be] `}
               onMouseEnter={handleMouseEnterNotifications}
@@ -210,7 +210,7 @@ function VerticalNavbar() {
             <div
               className={`${
                 isActiveSettings || isHoveredSettings
-                  ? "rounded-lg shadow-xl bg-white  text-[#000]"
+                  ? "rounded-lg shadow-xl bg-white  text-gray-950"
                   : ""
               } duration-500 flex items-center -ml-10 w-[225px] px-5 py-2 mt-2 text-[#b1b8be] `}
               onMouseEnter={handleMouseEnterSettings}
@@ -225,7 +225,7 @@ function VerticalNavbar() {
             <div
               className={`${
                 isActiveProfile || isHoveredProfile
-                  ? "rounded-lg shadow-xl bg-white  text-[#000]"
+                  ? "rounded-lg shadow-xl bg-white  text-gray-950"
                   : ""
               } duration-500 flex items-center -ml-10 w-[225px] px-5 py-2 mt-2 text-[#b1b8be] `}
               onMouseEnter={handleMouseEnterProfile}
@@ -240,7 +240,7 @@ function VerticalNavbar() {
             <div
               className={`${
                 isActiveLogout || isHoveredLogout
-                  ? "rounded-lg shadow-xl bg-white  text-[#000]"
+                  ? "rounded-lg shadow-xl bg-white  text-gray-950"
                   : ""
               } duration-500 flex items-center -ml-10 w-[225px] px-5 py-2 mt-2 text-[#b1b8be] `}
               onMouseEnter={handleMouseEnterLogout}
