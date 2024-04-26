@@ -96,6 +96,7 @@ export default function Login() {
           </div>
 
           <div>
+          <Link to="/home" >
             <button
               type="button"
               onClick={handleSignIn}
@@ -103,6 +104,7 @@ export default function Login() {
             >
               Sign in
             </button>
+          </Link>
           </div>
         </form>
 

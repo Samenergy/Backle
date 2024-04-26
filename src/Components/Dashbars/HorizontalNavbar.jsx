@@ -8,7 +8,6 @@ const HorizontalNavbar = () => {
         <a className="border border-r-black px-10 " href="">PEOPLE</a>
         <a className="border  px-10 "  href="">TRENDING</a>
       </div>
-
     </div>
   );
 };

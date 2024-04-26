@@ -7,6 +7,8 @@ import { TbMessageCircle2 } from "react-icons/tb";
 import { FaRegBell } from "react-icons/fa6";
 import { FaUserCircle } from "react-icons/fa";
 import { FiLogOut } from "react-icons/fi";
+import { IoIosSettings } from "react-icons/io";
+
 
 function VerticalNavbar() {
   const [isHoveredHome, setIsHoveredHome] = useState(false);
@@ -217,7 +219,7 @@ function VerticalNavbar() {
               onMouseLeave={handleMouseLeaveSettings}
               onClick={handleClickSettings}
             >
-              <MdOutlineExplore className="text-2xl w-auto mr-2" />
+              <IoIosSettings className="text-2xl w-auto mr-2" />
               <h1 className="text-xl">Settings</h1>
             </div>
           </a>
