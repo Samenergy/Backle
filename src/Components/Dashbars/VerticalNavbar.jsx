@@ -2,15 +2,29 @@ import React, { useState } from "react";
 import { GoHomeFill } from "react-icons/go";
 import { FaSearch } from "react-icons/fa";
 import { MdOutlineExplore } from "react-icons/md";
+import { TbMessageCircle2 } from "react-icons/tb";
+import { FaRegBell } from "react-icons/fa6";
+import { FaUserCircle } from "react-icons/fa";
+import { FiLogOut } from "react-icons/fi";
 
 function VerticalNavbar() {
   const [isHoveredHome, setIsHoveredHome] = useState(false);
-  const [isHoveredUsers, setIsHoveredUsers] = useState(false);
+  const [isHoveredSearch, setIsHoveredSearch] = useState(false);
+  const [isHoveredExplore, setIsHoveredExplore] = useState(false);
   const [isHoveredMessages, setIsHoveredMessages] = useState(false);
+  const [isHoveredNotifications, setIsHoveredNotifications] = useState(false);
+  const [isHoveredProfile, setIsHoveredProfile] = useState(false);
+  const [isHoveredSettings, setIsHoveredSettings] = useState(false);
+  const [isHoveredLogout, setIsHoveredLogout] = useState(false);
 
   const [isActiveHome, setIsActiveHome] = useState(false);
-  const [isActiveUsers, setIsActiveUsers] = useState(false);
+  const [isActiveSearch, setIsActiveSearch] = useState(false);
+  const [isActiveExplore, setIsActiveExplore] = useState(false);
   const [isActiveMessages, setIsActiveMessages] = useState(false);
+  const [isActiveNotifications, setIsActiveNotifications] = useState(false);
+  const [isActiveProfile, setIsActiveProfile] = useState(false);
+  const [isActiveSettings, setIsActiveSettings] = useState(false);
+  const [isActiveLogout, setIsActiveLogout] = useState(false);
 
   const handleMouseEnterHome = () => {
     setIsHoveredHome(true);
@@ -20,12 +34,20 @@ function VerticalNavbar() {
     setIsHoveredHome(false);
   };
 
-  const handleMouseEnterUsers = () => {
-    setIsHoveredUsers(true);
+  const handleMouseEnterSearch = () => {
+    setIsHoveredSearch(true);
   };
 
-  const handleMouseLeaveUsers = () => {
-    setIsHoveredUsers(false);
+  const handleMouseLeaveSearch = () => {
+    setIsHoveredSearch(false);
+  };
+
+  const handleMouseEnterExplore = () => {
+    setIsHoveredExplore(true);
+  };
+
+  const handleMouseLeaveExplore = () => {
+    setIsHoveredExplore(false);
   };
 
   const handleMouseEnterMessages = () => {
@@ -36,16 +58,68 @@ function VerticalNavbar() {
     setIsHoveredMessages(false);
   };
 
+  const handleMouseEnterNotifications = () => {
+    setIsHoveredNotifications(true);
+  };
+
+  const handleMouseLeaveNotifications = () => {
+    setIsHoveredNotifications(false);
+  };
+
+  const handleMouseEnterProfile = () => {
+    setIsHoveredProfile(true);
+  };
+
+  const handleMouseLeaveProfile = () => {
+    setIsHoveredProfile(false);
+  };
+
+  const handleMouseEnterSettings = () => {
+    setIsHoveredSettings(true);
+  };
+
+  const handleMouseLeaveSettings = () => {
+    setIsHoveredSettings(false);
+  };
+
+  const handleMouseEnterLogout = () => {
+    setIsHoveredLogout(true);
+  };
+
+  const handleMouseLeaveLogout = () => {
+    setIsHoveredLogout(false);
+  };
+
   const handleClickHome = () => {
     setIsActiveHome(!isActiveHome);
   };
 
-  const handleClickUsers = () => {
-    setIsActiveUsers(!isActiveUsers);
+  const handleClickSearch = () => {
+    setIsActiveSearch(!isActiveSearch);
+  };
+
+  const handleClickExplore = () => {
+    setIsActiveExplore(!isActiveExplore);
   };
 
   const handleClickMessages = () => {
     setIsActiveMessages(!isActiveMessages);
+  };
+
+  const handleClickNotifications = () => {
+    setIsActiveNotifications(!isActiveNotifications);
+  };
+
+  const handleClickProfile = () => {
+    setIsActiveProfile(!isActiveProfile);
+  };
+
+  const handleClickSettings = () => {
+    setIsActiveSettings(!isActiveSettings);
+  };
+
+  const handleClickLogout = () => {
+    setIsActiveLogout(!isActiveLogout);
   };
 
   return (
@@ -54,14 +128,14 @@ function VerticalNavbar() {
         <div>
           <img src="./src/assets/logo (1).png" className="-mt-20" />
         </div>
-        <div className="pt-[50px] px-8 font-semibold text-md flex flex-col justify-between items-left text-[16px]">
+        <div className=" px-8 font-semibold  flex flex-col justify-between items-left ">
           <a href="/">
             <div
               className={`${
                 isActiveHome || isHoveredHome
-                  ? "rounded-lg shadow-xl bg-white text-[#00bf63] border border-[#ffffff]"
-                  : ""
-              } duration-500 flex items-center -ml-14 w-[225px] px-5 py-2`}
+                  ? "rounded-lg shadow-xl bg-white border border-[#ffffff]"
+                  : "rounded-lg shadow-xl bg-white border border-[#ffffff]"
+              } duration-500 flex items-center -ml-10 w-[225px] px-5 py-2`}
               onMouseEnter={handleMouseEnterHome}
               onMouseLeave={handleMouseLeaveHome}
               onClick={handleClickHome}
@@ -73,31 +147,107 @@ function VerticalNavbar() {
           <a href="/">
             <div
               className={`${
-                isActiveUsers || isHoveredUsers
-                  ? "rounded-lg shadow-xl bg-white text-[#00bf63] border border-[#ffffff]"
+                isActiveSearch || isHoveredSearch
+                  ? "rounded-lg shadow-xl bg-white  text-[#000]"
                   : ""
-              } duration-500 flex items-center -ml-14 w-[225px] px-5 py-2`}
-              onMouseEnter={handleMouseEnterUsers}
-              onMouseLeave={handleMouseLeaveUsers}
-              onClick={handleClickUsers}
+              } duration-500 flex items-center -ml-10 w-[225px] px-5 py-2 mt-2 text-[#b1b8be] `}
+              onMouseEnter={handleMouseEnterSearch}
+              onMouseLeave={handleMouseLeaveSearch}
+              onClick={handleClickSearch}
             >
-              <FaSearch className="text-3xl w-auto mr-2.5" />
+              <FaSearch className="text-2xl w-auto mr-3" />
               <h1 className="text-2xl">Search</h1>
             </div>
           </a>
           <a href="/">
             <div
               className={`${
-                isActiveMessages || isHoveredMessages
-                  ? "rounded-lg shadow-xl bg-white text-[#00bf63] border border-[#ffffff]"
+                isActiveExplore || isHoveredExplore
+                  ? "rounded-lg shadow-xl bg-white  text-[#000]"
                   : ""
-              } duration-500 flex items-center -ml-14 w-[225px] px-5 py-2 mt-20`}
+              } duration-500 flex items-center -ml-10 w-[225px] px-5 py-2 mt-2 text-[#b1b8be] `}
+              onMouseEnter={handleMouseEnterExplore}
+              onMouseLeave={handleMouseLeaveExplore}
+              onClick={handleClickExplore}
+            >
+              <MdOutlineExplore className="text-3xl w-auto mr-2" />
+              <h1 className="text-2xl">Explore</h1>
+            </div>
+          </a>
+          <a href="/">
+            <div
+              className={`${
+                isActiveMessages || isHoveredMessages
+                  ? "rounded-lg shadow-xl bg-white  text-[#000]"
+                  : ""
+              } duration-500 flex items-center -ml-10 w-[225px] px-5 py-2 mt-2 text-[#b1b8be] `}
               onMouseEnter={handleMouseEnterMessages}
               onMouseLeave={handleMouseLeaveMessages}
               onClick={handleClickMessages}
             >
-              <MdOutlineExplore className="text-3xl w-auto mr-2.5 " />
-              <h1 className="text-2xl">Explore</h1>
+              <TbMessageCircle2 className="text-3xl w-auto mr-2" />
+              <h1 className="text-2xl">Messages</h1>
+            </div>
+          </a>
+          <a href="/">
+            <div
+              className={`${
+                isActiveNotifications || isHoveredNotifications
+                  ? "rounded-lg shadow-xl bg-white  text-[#000]"
+                  : ""
+              } duration-500 flex items-center -ml-10 w-[225px] px-5 py-2 mt-2 text-[#b1b8be] `}
+              onMouseEnter={handleMouseEnterNotifications}
+              onMouseLeave={handleMouseLeaveNotifications}
+              onClick={handleClickNotifications}
+            >
+              <FaRegBell className="text-3xl w-auto mr-2" />
+              <h1 className="text-2xl">Notifications</h1>
+            </div>
+          </a>
+          
+          <a href="/">
+            <div
+              className={`${
+                isActiveSettings || isHoveredSettings
+                  ? "rounded-lg shadow-xl bg-white  text-[#000]"
+                  : ""
+              } duration-500 flex items-center -ml-10 w-[225px] px-5 py-2 mt-2 text-[#b1b8be] `}
+              onMouseEnter={handleMouseEnterSettings}
+              onMouseLeave={handleMouseLeaveSettings}
+              onClick={handleClickSettings}
+            >
+              <MdOutlineExplore className="text-3xl w-auto mr-2" />
+              <h1 className="text-2xl">Settings</h1>
+            </div>
+          </a>
+          <a href="/">
+            <div
+              className={`${
+                isActiveProfile || isHoveredProfile
+                  ? "rounded-lg shadow-xl bg-white  text-[#000]"
+                  : ""
+              } duration-500 flex items-center -ml-10 w-[225px] px-5 py-2 mt-2 text-[#b1b8be] `}
+              onMouseEnter={handleMouseEnterProfile}
+              onMouseLeave={handleMouseLeaveProfile}
+              onClick={handleClickProfile}
+            >
+              <FaUserCircle className="text-3xl w-auto mr-2" />
+              <h1 className="text-2xl">Profile</h1>
+            </div>
+          </a>
+          <a href="/">
+            <div
+              className={`${
+                isActiveLogout || isHoveredLogout
+                  ? "rounded-lg shadow-xl bg-white  text-[#000]"
+                  : ""
+              } duration-500 flex items-center -ml-10 w-[225px] px-5 py-2 mt-2 text-[#b1b8be] `}
+              onMouseEnter={handleMouseEnterLogout}
+              onMouseLeave={handleMouseLeaveLogout}
+              onClick={handleClickLogout}
+            >
+              <FiLogOut className="text-3xl w-auto mr-2" />
+              <h1 className="text-2xl">Log out</h1>
             </div>
           </a>
         </div>
