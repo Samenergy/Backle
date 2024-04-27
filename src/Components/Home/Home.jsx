@@ -5,7 +5,7 @@ import RightSidebar from "../Dashbars/RightSidebar";
 
 const Home = () => {
   return (
-    <div className="flex px-10">
+    <div className="flex px-5">
       <VerticalNavbar />
       <div className=" flex items-center gap-10  ">
         <HorizontalNavbar />
