@@ -7,10 +7,10 @@ const RightSidebar = () => {
   
 
   return (
-    <div className="absolute right-10 top-5">
+    <div className="absolute right-0 px-5 top-5  bg-[#edf2f6]    ">
       <div>
         <Searchbar/>
-        {/* <Trending/> */}
+        <Trending/>
         <Whotofollow/>
         
       </div>

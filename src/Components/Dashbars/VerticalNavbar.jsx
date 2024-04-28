@@ -126,12 +126,12 @@ function VerticalNavbar() {
   };
 
   return (
-    <div className="flex w-[250px]  ">
+    <div className="flex fixed  ">
       <div className="bg-[#edf2f6] h-screen p-5 pt-8 w-[220px] duration-500 relative">
         <div>
           <img src="./src/assets/logo (1).png" className="-mt-20" />
         </div>
-        <div className=" px-8 font-semibold  flex flex-col justify-between items-left -mt-5">
+        <div className=" px-8 font-semibold  flex flex-col justify-between items-left -mt-5 gap-2">
           <a href="/home">
             <div
               className={`${
