@@ -7,7 +7,7 @@ const RightSidebar = () => {
   
 
   return (
-    <div className="absolute right-0 px-5 top-5  bg-[#edf2f6]    ">
+    <div className="absolute right-0 pr-20 top-0 pt-5  bg-[#e1f7eb]    ">
       <div>
         <Searchbar/>
         <Trending/>

@@ -66,7 +66,7 @@ const Whotofollow = () => {
               </div>
             </a>
             <button
-              className="bg-[#00bf63] text-white px-4 py-1 rounded-lg "
+              className="bg-[#00bf63] text-white px-4 py-1 rounded-lg  "
               onClick={() => handleFollowClick(user.id)}
             >
               {user.isFollowing ? "Following" : "Follow"}
