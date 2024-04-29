@@ -127,7 +127,7 @@ function VerticalNavbar() {
 
   return (
     <div className="flex fixed  ">
-      <div className="bg-[#e1f7eb] h-screen p-5 pt-8 w-[220px] duration-500 relative">
+      <div className=" h-screen p-5 pt-8 w-[220px] duration-500 relative">
         <div>
           <img src="./src/assets/logo (1).png" className="-mt-20" />
         </div>

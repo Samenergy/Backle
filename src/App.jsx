@@ -6,12 +6,15 @@ import Home from "./Components/Home/Home";
 
 const App = () => {
   return (
-    <div className="bg-[#edf2f6]">
-      <Routes>
-        <Route path="/home" element={<Home />} />
-        <Route path="/login" element={<Landingpage />} />
-        <Route path="/Signup" element={<Signup />} />
-      </Routes>
+    <div className="relative">
+      <div className="fixed inset-0 bg-[#e1f7eb] z-[-1]"></div>
+      <div className="relative z-10">
+        <Routes>
+          <Route path="/home" element={<Home />} />
+          <Route path="/login" element={<Landingpage />} />
+          <Route path="/Signup" element={<Signup />} />
+        </Routes>
+      </div>
     </div>
   );
 };

@@ -24,6 +24,10 @@ const Onyourmind = ({ onPost }) => {
       setAttachment(null);
     }
   };
+  const handlePostAndCloseModal = () => {
+    handlePost(); // Call handlePost function
+    closeModal(); // Call closeModal function
+  };
 
   const openModal = () => {
     setShowModal(true);
@@ -67,18 +71,21 @@ const Onyourmind = ({ onPost }) => {
               className="w-full p-2 mb-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
               onChange={handleAttachment}
             />
-            <button
-              className="w-full px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 focus:outline-none"
-              onClick={handlePost}
-            >
-              Post
-            </button>
-            <button
-              className="mt-2 w-full px-4 py-2 text-gray-700 bg-gray-200 rounded-md hover:bg-gray-300 focus:outline-none"
-              onClick={closeModal}
-            >
-              Cancel
-            </button>
+            <div className="flex items-center gap-5 ">
+              <button
+                className="w-1/4 px-4 py-2 text-gray-700 bg-gray-200 rounded-md hover:bg-gray-300 focus:outline-none"
+                onClick={closeModal}
+              >
+                Cancel
+              </button>
+              <button
+                className="w-1/4 px-4 py-2 text-white bg-[#00bf63] rounded-md hover:bg-[[#00bf63]] focus:outline-none"
+                onClick={handlePostAndCloseModal}
+                
+              >
+                Post
+              </button>
+            </div>
           </div>
         </div>
       )}

@@ -9,21 +9,21 @@ const ProfileCard = ({ name, username, profileImage }) => {
   };
 
   return (
-    <div className="flex flex-col items-center rounded-xl bg-white shadow  py-4  ">
+    <div className="flex flex-col items-center rounded-xl bg-white shadow px-8 py-4">
       <a href="">
         <img
           src={profileImage}
           alt={username}
-          className="w-16 h-16 rounded-full"
+          className="w-16 h-auto rounded-full"
         />
-        <RiVerifiedBadgeFill className="absolute top-[300px] text-[#00bf63] ml-6 text-xl" />
+        <RiVerifiedBadgeFill className="absolute top-[119px] text-[#00bf63] ml-6 text-xl" />
         <div className="my-2">
           <h2 className="text-md font-semibold">{name}</h2>
           <p className="text-xs text-gray-400">@{username}</p>
         </div>
       </a>
       <button
-        className={`px-4 py-1 duration-700 rounded-lg ${
+        className={`px-4 py-1   duration-700 rounded-full ${
           isFollowing
             ? "bg-[#00bf63] border-[#00bf63] text-white"
             : "bg-white  border border-[#00bf63] text-[#00bf63]"

@@ -3,7 +3,7 @@ import React from "react";
 
 const PostList = ({ posts }) => {
   return (
-    <div className=" w-[546px] bg-[#e1f7eb] rounded-2xl shadow-lg duration-500 mt-12 absolute top-44 left-96">
+    <div className=" w-[546px] bg-[#e1f7eb]   rounded-2xl shadow-lg duration-500 mt-72 absolute top-40 left-96">
       {posts.map((post) => (
         <div key={post.id} className="p-4 my-2 bg-white rounded-2xl shadow-lg duration-500">
           <p>{post.text}</p>

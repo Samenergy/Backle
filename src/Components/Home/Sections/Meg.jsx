@@ -17,7 +17,7 @@ function Meg() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center bg-[#e1f7eb] ml-96 ">
+    <div className="h-screen flex flex-col items-center justify-center bg-[#e1f7eb] ml-96 ">
       <Onyourmind onPost={handlePost} />
       <Followers/>
       <PostList posts={posts} />
